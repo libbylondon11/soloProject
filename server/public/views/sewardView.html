@@ -1,0 +1,12 @@
+<div class="sewardTitle">Seward Friendship Co-op:</div>
+<div>
+  {{seward.message}}
+  <!-- {{seward.coopArray}} -->
+  <div ng-repeat="item in seward.coopArray">
+    PLU: {{item.product_id_plu}}
+    Name: {{item.product_name}}
+    <button ng-click="seward.addToUserCupboard(item)">Add to my Cupboard</button>
+  </div>
+  <!-- {{seward.data.product_name}} -->
+  <!-- {{seward.response.data}} -->
+</div>

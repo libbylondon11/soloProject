@@ -1,0 +1,23 @@
+.jumbotron {
+  font-size: 25px;
+  font: Helvetica;
+  color: goldenrod;
+}
+.sewardTitle {
+  font-size: 16px;
+  font:Helvetica;
+  color: goldenrod;
+}
+.sewardTitle ng-repeat {
+  color: blue;
+}
+.eastsideTitle {
+  font-size: 16px;
+  font:Helvetica;
+  color: goldenrod;
+}
+.wedgeTitle {
+  font-size: 16px;
+  font:Helvetica;
+  color: goldenrod;
+}

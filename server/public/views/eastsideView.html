@@ -1,0 +1,12 @@
+<div class="eastsideTitle">Eastside Co-op:</div>
+<div>
+  {{eastside.message}}
+  <!-- {{seward.coopArray}} -->
+  <div ng-repeat="item in eastside.coopArray">
+    PLU: {{item.product_id_plu}}
+    Name: {{item.product_name}}
+    <button ng-click="eastside.addToUserCupboard(item)">Add to my Cupboard</button>
+  </div>
+  <!-- {{seward.data.product_name}} -->
+  <!-- {{seward.response.data}} -->
+</div>

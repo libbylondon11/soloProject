@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="whiteApp">
+
+
   <head>
     <meta charset="utf-8">
     <title>White Powder Finder</title>
@@ -8,17 +10,22 @@
     <script src="assets/scripts/client.min.js"></script>
     <link rel="stylesheet" href="views/style.css"/>
     <link rel="stylesheet" href="views/application.scss"/>
+
+
+</head>
     <!-- <base href="/" /> -->
-  </head>
-  <div class="logo">
-  </div>
+
+    <h2> NAME THAT POWDER:
+  A Co-op Bulk Aisle Support App
+      </h2>
+      <img src="views/WhitePowderBag.png" alt="Logo image" height="250px" width="175px">
   <body class="container" ng-controller="LoginController as login">
-    <h2> NAME THAT POWDER: A Co-op Bulk Aisle Support App   </h2> </br>
-    <h1> Log in to find the name of your powder!  </h1>
+    <p> Log in to find the name of your powder! </p>
     <form id="loginForm" action="/" method="POST">
+      <div>
       <label for="username"> Username: </label>
       <input type="text" name="username" id= "username" />
-    </div>
+</div>
     <div>
       <label for "password"> Password: </label>
       <input type="password" name="password" id="password"/>
@@ -26,7 +33,6 @@
     <div>
       <input type="submit"/>
       <a href="/register">Register</a>
-
     </div>
   </form>
 </body>

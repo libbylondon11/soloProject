@@ -5,7 +5,9 @@
   <div ng-repeat="item in eastside.coopArray">
     PLU: {{item.product_id_plu}}
     Name: {{item.product_name}}
+    <div class="button">
     <button ng-click="eastside.addToUserCupboard(item)">Add to my Cupboard</button>
+  </div>
   </div>
   <!-- {{seward.data.product_name}} -->
   <!-- {{seward.response.data}} -->

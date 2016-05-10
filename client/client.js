@@ -51,15 +51,22 @@ app.controller('HomeController', function(){
 
 app.controller('SewardController', ['$http', function($http){
   var vm=this;
+  vm.name="Seward Friendship Co-op";
   vm.id=2;
   // this.coopArray=[];
   this.coopArray={};
   this.message="select your white powder:";
   $http.get("/coops/" + vm.id).then(function(response){
     vm.coopArray=response.data;
-    // vm.coopArray=response.id;
     console.log(response);
   })
+  vm.addToUserCupboard=function(item){
+    console.log('item added to user cupboard');
+    item.coop_name = vm.name;
+    $http.post('/add', item).then(function(response){
+      console.log('add to user', response);
+    })
+  };
 }])
 app.controller('EastsideController', ['$http', function($http){
   var vm=this;
@@ -83,6 +90,7 @@ app.controller('EastsideController', ['$http', function($http){
 
 app.controller('WedgeController', ['$http', function($http){
   var vm=this;
+  vm.name="Wedge Co-op";
   vm.id=3;
   this.coopArray={};
   this.message="Here are the white powder names";
@@ -91,16 +99,27 @@ app.controller('WedgeController', ['$http', function($http){
 
     console.log(response);
   })
+  vm.addToUserCupboard=function(item){
+    console.log('item added to user cupboard');
+    item.coop_name = vm.name;
+    $http.post('/add', item).then(function(response){
+      console.log('add to user', response);
+    })
+  };
 }])
-app.controller('UserController', ['UserService', function(UserService, $http){
+app.controller('UserController', ['UserService', '$http', function(UserService, $http){
   var vm=this;
   UserService.getUserData();
   vm.user=UserService.user;
   this.message="Hey user, here is your cupboard full of white powders";
-  $http.get("/userPage/" + vm.user).then(function(response){
-    console.log(response);
-    UserService.getUserData();
+  $http.get("/userPage").then(function(response){
+    console.log('userPage', response);
+    vm.cupboardContentsArray=response.data;
   })
+  vm.deleteFromCupboard=function(item){
+    console.log('item deleted from user cupboard');
+    item.product_name='';
+  }
 }])
 app.factory('UserService', ['$http', function($http){
 

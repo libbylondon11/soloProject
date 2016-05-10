@@ -1,7 +1,7 @@
-<div class="userCupboard">User Page:</div>
+<div class="userCupboard">{{user.name}}</div>
 <div>
   {{user.message}}
-  <div ng-repeat="item in user.cupboardContentsArray()">
+  <div ng-repeat="item in user.cupboardContentsArray">
     Product Name: {{item.product_name}}
     Product Number {{item.product_id_plu}}
     {{item.data.info.product_name}}

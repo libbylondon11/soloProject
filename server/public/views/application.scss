@@ -2,13 +2,18 @@
 
 //setting variables//
 // $mainColor:
+$primaryColor: #661b24;
+$cupboardColor: #9e7937;
 $font:'Bookman Old Style', sans-sefif;
 
 //styling//
-.logo{
-  background: url(WhitePowderBag.psd) repeat center center fixed;
-  // -webkit-background-size: cover;
-  // -moz-background-size: cover;
-  // -o-background-size: cover;
-  // background-size: cover;
+
+body {
+ color: $cupboardColor;
+}
+.button:hover{
+  color: $primaryColor;
+}
+.eastSideTitle {
+  color: $primaryColor;
 }

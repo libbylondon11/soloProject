@@ -1,0 +1,10 @@
+<div class="userCupboard">User Page:</div>
+<div>
+  {{user.message}}
+  <div ng-repeat="item in user.cupboardContentsArray()">
+    Product Name: {{item.product_name}}
+    Product Number {{item.product_id_plu}}
+    {{item.data.info.product_name}}
+    <button ng-click="user.delete()">I labeled it!</button>
+  </div>
+</div>

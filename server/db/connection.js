@@ -29,25 +29,25 @@ function initializeDB(){
   });
 }
 
-function initializeSewardDB(){
+function initializeUserDB(){
   pg.connect(connectionString, function(err, client, done){
     if(err){
       console.log('error connecting to DB!', err);
       process.exit(1);
     }else{
-      var query=client.query('CREATE TABLE IF NOT EXISTS coops (coop_id serial PRIMARY KEY, coop_name varchar(80) NOT NULL)');
+      var query=client.query('CREATE TABLE IF NOT EXISTS users (user_id serial PRIMARY KEY, user_name varchar(80) NOT NULL)');
 
       query.on('end', function(){
-        console.log('successfully created schema');
+        console.log('successfully created users schema');
         done();
       });
 
       query.on('error', function(error){
-        console.log('error creating schema', error);
+        console.log('error creating users schema', error);
         process.exit(1);
       });
     }
   });
 }
 module.exports.connectionString=connectionString;
-module.exports.initializeSewardDB=initializeSewardDB;
+module.exports.initializeUserDB=initializeUserDB;

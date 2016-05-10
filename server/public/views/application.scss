@@ -1,0 +1,14 @@
+@import "bourbon/bourbon";
+
+//setting variables//
+// $mainColor:
+$font:'Bookman Old Style', sans-sefif;
+
+//styling//
+.logo{
+  background: url(WhitePowderBag.psd) repeat center center fixed;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
+}

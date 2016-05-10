@@ -1,23 +1,20 @@
-.jumbotron {
-  font-size: 25px;
-  font: Helvetica;
-  color: goldenrod;
+@charset "utf-8";
+
+html {
+  box-sizing: border-box;
+  *, *:before, *:after {
+  box-sizing: inherit;
 }
-.sewardTitle {
-  font-size: 16px;
-  font:Helvetica;
-  color: goldenrod;
 }
-.sewardTitle ng-repeat {
-  color: blue;
+h1, h2,body, a, p, input {
+  font-family: "Bookman Old Style", sans-serif;
+  color: #3f3c3a;
+  text-align: center;
 }
-.eastsideTitle {
-  font-size: 16px;
-  font:Helvetica;
-  color: goldenrod;
-}
-.wedgeTitle {
-  font-size: 16px;
-  font:Helvetica;
-  color: goldenrod;
+.logo {
+  background: url(WhitePowderBag.psd) repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

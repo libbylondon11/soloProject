@@ -21,8 +21,20 @@ module.exports = function(grunt) {
                ],
                "dest": "server/public/vendors/"
            }
-       }
-   });
+       },
+  sass: {
+    dist: {
+      options: {
+        // includePaths: require('node-bourbon').with('other/path', 'another/path')
+        // - or -
+        includePaths: require('node-bourbon').includePaths
+      },
+      files: {
+        'path/to/output.css': 'path/to/input.scss'
+      }
+    }
+  }
+});
 
    grunt.loadNpmTasks('grunt-contrib-copy');
    grunt.loadNpmTasks('grunt-contrib-uglify');

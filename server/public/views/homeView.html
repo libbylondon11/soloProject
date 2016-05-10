@@ -7,15 +7,16 @@
     <script src="vendors/angular-route/angular-route.min.js"></script>
     <script src="assets/scripts/client.min.js"></script>
     <link rel="stylesheet" href="views/style.css"/>
+    <link rel="stylesheet" href="views/application.scss"/>
     <base href="/"/>
   </head>
-  <body class="container" ng-controller="HomeController as home">
-    <div class="jumbotron">
-      <h1>  White Powder Finder:
-      A Co-op Bulk Aisle Support App
-  </h1>
-  <h2> Which white powder are you searching for today? Select your co-op below: </h2>
+  <div class="jumbotron">
+    <h1>NAME THAT POWDER: A Co-op Bulk Aisle Support App </h1>
+<h2> Which white powder are you searching for today?
+  Select your co-op below: </h2>
 </div>
+  <body class="container" ng-controller= "HomeController as home">
+
 <nav class="navbar navbar-default">
       <div class="container">
         <ul class="nav navbar-nav">
@@ -30,8 +31,12 @@
             <li>
               <a href="/wedgeView">Wedge Co-op</a>
             </li>
+            <li>
+              <a href="/userCupboard">View Your Cupboard</a>
+            </li>
           </ul>
         </div>
+      </div>
       </nav>
 <div ng-view>
 </div>

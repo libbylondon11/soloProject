@@ -7,12 +7,14 @@
     <script src="vendors/angular-route/angular-route.min.js"></script>
     <script src="assets/scripts/client.min.js"></script>
     <link rel="stylesheet" href="views/style.css"/>
+    <link rel="stylesheet" href="views/application.scss"/>
     <!-- <base href="/" /> -->
   </head>
+  <div class="logo">
+  </div>
   <body class="container" ng-controller="LoginController as login">
-    <h2>  White Powder Finder:
-      A Co-op Bulk Aisle Support App </h2> </br>
-    <h1> Log in space  </h1>
+    <h2> NAME THAT POWDER: A Co-op Bulk Aisle Support App   </h2> </br>
+    <h1> Log in to find the name of your powder!  </h1>
     <form id="loginForm" action="/" method="POST">
       <label for="username"> Username: </label>
       <input type="text" name="username" id= "username" />

@@ -6,12 +6,13 @@
     <script src="vendors/angular/angular.min.js"></script>
     <script src="vendors/angular-route/angular-route.min.js"></script>
     <script src="assets/scripts/client.min.js"></script>
+    <link rel="stylesheet" href="views/style.css"/>
+    <link rel="stylesheet" href="views/application.scss"/>
       <!-- <base href="/register" /> -->
   </head>
   <body class="container" ng-controller="RegisterController as register">
-    <h2>  White Powder Finder:
-      A Co-op Bulk Aisle Support App </h2> </br>
-    <h1> Registration Space </h1>
+    <h2> NAME THAT POWDER: A Co-op Bulk Aisle Support App   </h2> </br>
+    <h1> Register below to find the name of your powder! </h1>
     <form action="/register" method="post">
       <div>
       <label for="username"> Username: </label>
@@ -24,7 +25,7 @@
     <div>
       <input type="submit" value="register" />
     </div>
-  
+
 </form>
 </body>
 <html>

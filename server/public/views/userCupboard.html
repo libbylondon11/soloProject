@@ -1,10 +1,15 @@
 <div class="userCupboard">{{user.name}}</div>
 <div>
   {{user.message}}
-  <div ng-repeat="item in user.cupboardContentsArray">
+</div>
+  <div ng-repeat="item in user.data.cupboardContentsArray">
+    Product PLU Number: {{item.product_id_plu}}
     Product Name: {{item.product_name}}
-    Product Number {{item.product_id_plu}}
-    {{item.data.info.product_name}}
-    <button ng-click="user.delete()">I labeled it!</button>
-  </div>
+    From Co-op Name: {{item.coop_name}}
+    <!-- {{item.data.info.product_name}}
+    {{item.data.info.product_id_plu}} -->
+<div>
+    <button ng-click="user.deleteItem(item)">I labeled it!</button>
+</div>
+</div>
 </div>

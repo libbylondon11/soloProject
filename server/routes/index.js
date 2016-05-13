@@ -10,6 +10,10 @@ router.get('/', function(request, response){
   response.sendFile(path.join(__dirname, '../public/views/login.html'))
   console.log('index.js loading');
 });
+router.get('/logout', function(request, response){
+  request.logout();
+  response.redirect('/');
+})
 router.post('/', passport.authenticate('local',
 { successRedirect: '/home',
   failureRedirect: '/'

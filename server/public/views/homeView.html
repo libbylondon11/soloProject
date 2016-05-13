@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html ng-app="whiteApp">
-  
+
   <head>
     <meta charset="utf-8">
     <title>White Powders App</title>
@@ -14,33 +14,34 @@
   </head>
   <div class="jumbotron">
     <h1>NAME THAT POWDER: A Co-op Bulk Aisle Support App </h1>
-
-<h2> Which white powder are you searching for today?
-  Select your co-op below: </h2>
+<h2>For those times when you buy a white colored spice in the bulk aisle and forget to write down the name </h2>
+  <h3>Which white powder are you searching for today?
+    Select your co-op below:  </h3>
 </div>
   <body class="container" ng-controller= "HomeController as home">
+  <header class="navigation">
+    <div class="navigation-wrapper">
+      <!-- <a href="javascript:void(0)" class="logo">
+        <img src="views/WhitePowderBag.png" alt="Logo image" height="250px" width="175px">
+    </a> -->
+    <div class="nav">
+          <ul class="navigation-menu">
+            <li class="nav-link"><a href="/eastsideView">Eastside Co-op</a></li>
+            <li class="nav-link"><a href="/sewardView">Seward Friendship Co-op</a></li>
+            <li class="nav-link"><a href="/wedgeView">Wedge Co-op</a></li>
+              <li class="nav-link"><a href="/userCupboard">View Your Cupboard</a></li>
+                <li class="nav-link"><a href="/logout" target="_self">Log Out</a></li>
+            <li class="nav-link more"><a href="/">Home</a></li>
 
-<nav class="navbar navbar-default">
-      <div class="container">
-        <ul class="nav navbar-nav">
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/eastsideView">Eastside Co-op</a>
-            <li>
-              <a href="/sewardView">Seward Friendship Co-op</a>
-            </li>
-            <li>
-              <a href="/wedgeView">Wedge Co-op</a>
-            </li>
-            <li>
-              <a href="/userCupboard">View Your Cupboard</a>
-            </li>
+          <!-- <nav role="navigation">
+               <a href="/eastsideView">Eastside Co-op</a> -->
+           </ul>
+         </nav>
+       </div>
+
           </ul>
-        </div>
-      </div>
-      </nav>
+
+ </header>
 <div ng-view>
 </div>
 </body>

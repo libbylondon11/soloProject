@@ -63,10 +63,11 @@ app.controller('SewardController', ['$http', function($http){
   vm.addToUserCupboard=function(item){
     console.log('item added to user cupboard');
     item.coop_name = vm.name;
-    $http.post('/add', item).then(function(response){
+    $http.post('/userPage', item).then(function(response){
       console.log('add to user', response);
     })
   };
+
 }])
 app.controller('EastsideController', ['$http', function($http){
   var vm=this;
@@ -82,7 +83,7 @@ app.controller('EastsideController', ['$http', function($http){
   vm.addToUserCupboard=function(item){
     console.log('item added to user cupboard');
     item.coop_name = vm.name;
-    $http.post('/add', item).then(function(response){
+    $http.post('/userPage', item).then(function(response){
       console.log('add to user', response);
     })
   };
@@ -102,38 +103,74 @@ app.controller('WedgeController', ['$http', function($http){
   vm.addToUserCupboard=function(item){
     console.log('item added to user cupboard');
     item.coop_name = vm.name;
-    $http.post('/add', item).then(function(response){
+    $http.post('/userPage', item).then(function(response){
       console.log('add to user', response);
     })
   };
 }])
+
 app.controller('UserController', ['UserService', '$http', function(UserService, $http){
   var vm=this;
-  UserService.getUserData();
-  vm.user=UserService.user;
-  this.message="Hey user, here is your cupboard full of white powders";
-  $http.get("/userPage").then(function(response){
-    console.log('userPage', response);
-    vm.cupboardContentsArray=response.data;
-  })
-  vm.deleteFromCupboard=function(item){
-    console.log('item deleted from user cupboard');
-    item.product_name='';
-  }
+
+  vm.cupboardContentsArray={};
+
+  //Binding service data
+  vm.data=UserService.user;
+
+  // UserService.getUserData();
+
+  vm.message="Hey user, here is your cupboard full of white powders";
+  // $http.get("/userPage").then(function(response){
+  //   console.log('userPage', response);
+  //   vm.cupboardContentsArray=response.data;
+  //
+  // })
+  vm.deleteItem = function(product){
+    console.log(product);
+    UserService.deleteItemFromCupboard(product.product_id_plu)
+  };
+
+  // function init(){
+  //   UserService.getUserData();
+  //   //more things here
+  // }
+
 }])
 app.factory('UserService', ['$http', function($http){
 
   var user={};
 
-  var getUserData=function(){
-    $http.get('/').then(function(response){
+  var deleteItemFromCupboard=function(id){
+    console.log('hit service');
+    $http.delete('/userPage/'+ id).then(function(response){
       console.log(response);
-      user.info=response.data;
-      console.log('user is', user.info);
+      getUserData();
+    })
+  }
+  var getUserData=function(){
+    $http.get('/userPage').then(function(response){
+      console.log(response);
+      user.cupboardContentsArray = response.data;
+      console.log('user is', user.cupboardContentsArray);
     });
   };
   return {
     user: user,
-    getUserData: getUserData
+    getUserData: getUserData,
+    deleteItemFromCupboard: deleteItemFromCupboard
   };
+
+  // var deleteItem=function(){
+  //   $http.delete('/userPage').then(function(response){
+  //     console.log(response)
+  //     user.infor=response.data;
+  //     console.log('deleting...')
+  //   });
+  // };
+  //
+  // return {
+  //   user: user,
+  //   deleteItem: deleteItem
+  // };
+
 }]);

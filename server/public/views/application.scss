@@ -1,19 +1,24 @@
 @import "bourbon/bourbon";
+@import "neat/neat";
+@import "refills/refills";
 
 //setting variables//
 // $mainColor:
 $primaryColor: #661b24;
 $cupboardColor: #9e7937;
-$font:'Bookman Old Style', sans-sefif;
+$font-base:'Bookman Old Style', sans-sefif;
+// $mobile: new-breakpoint(max-width 500px 4);
 
 //styling//
 
-body {
- color: $cupboardColor;
+.navigation-wrapper {
+   @include span-columns(6);
 }
-.button:hover{
-  color: $primaryColor;
+.nav-link {
+  @include columns(12 8em);
+  @include column-rule(1px solid green);
 }
-.eastSideTitle {
-  color: $primaryColor;
+.nav-link:hover {
+  background-color: $primaryColor;
+  color: black;
 }

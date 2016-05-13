@@ -12,7 +12,7 @@ router.get('/*', function(request, response, next){
     userId=request.user.user_id;
     next();
   } else {
-    response.send('404 not found');
+    response.redirect('/');
   }
 })
 router.get('/', function(request, response){
@@ -40,6 +40,11 @@ router.get('/list', function(request, response, next){
         response.send(results);
         done();
       });
+      query.on('error', function(error){
+       console.log('Error running query:', error);
+       done();
+       response.sendStatus(500);
+     });
     }
   });
 });

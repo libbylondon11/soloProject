@@ -1,24 +1,112 @@
-@import "bourbon/bourbon";
-@import "neat/neat";
-@import "refills/refills";
+// @import "libraries/bourbon/bourbon";
+@import "libraries/bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "libraries/neat/neat";
+// @import "libraries/refills/refills";
+
+// @import "libraries/bourbon/app/assets/stylesheets/_bourbon.scss";
+// @import "_reset.scss";
+//
+// @import "_variables.scss";
+//
+// @import "_mixins.scss";
 
 //setting variables//
 // $mainColor:
 $primaryColor: #661b24;
 $cupboardColor: #9e7937;
-$font-base:'Bookman Old Style', sans-sefif;
-// $mobile: new-breakpoint(max-width 500px 4);
+$font:'Timber', sans-sefif;
+$mobile: new-breakpoint(max-width 490px 4);
 
+// @import "scss/brian";
+//
+// .brian {
+//   .libby {
+//     .kjell {
+//       background: blue;
+//
+//     }
+//   }
+// }
+.top {
+  font-family: $font;
+  color: $primaryColor;
+  font-size: 200px;
+  text-align: center;
+}
+input[type=text] {
+  font-size: 70px;
+  font-family: $font;
+  font-color: $cupboardColor;
+  background-color: blue;
+  width: 800px;
+  height: 100px;
+  float: left;
+}
+// .idk {
+//   width: 300px;
+// }
+input[type=password]{
+  background-color: yellow;
+  font-size: 70px;
+  font-family: $font;
+  font-color: $cupboardColor;
+  width: 800px;
+  height: 100px;
+  float: left;
+}
+.sButton {
+  border-radius: 70px;
+  font-family: $font;
+  font-color: $primaryColor;
+  font-size: 100px;
+  background-color: orange;
+}
+.registration {
+  border-radius: 70px;
+  font-family: $font;
+  font-color: $primaryColor;
+  font-size: 100px;
+  background-color: orange;
+}
+a {
+  text-decoration: none;
+  font-color: none;
+}
+li {
+ list-style: none;
+}
+// button:hover {
+//   background-color: #8A58B7;
+// }
+#loginForm {
+  color: $primaryColor;
+  font-family: $font;
+  font-size: 200px;
+}
+// .password {
+//   size: 200px;
+//   color: $primaryColor;
+//   font-family: $font;
+// }
+// .username {
+//   size: 200px;
+//   color: $primaryColor;
+//   font-family: $font;
+// }
+body{
+  background: url(WhitePowderBag.png) repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 //styling//
-
 .navigation-wrapper {
-   @include span-columns(6);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.nav-link {
-  @include columns(12 8em);
-  @include column-rule(1px solid green);
-}
-.nav-link:hover {
-  background-color: $primaryColor;
-  color: black;
-}
+
+.nav {
+   @include span-columns(9);
+ }

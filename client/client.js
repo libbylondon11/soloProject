@@ -117,7 +117,7 @@ app.controller('UserController', ['UserService', '$http', function(UserService, 
   //Binding service data
   vm.data=UserService.user;
 
-  // UserService.getUserData();
+  UserService.getUserData();
 
   vm.message="Hey user, here is your cupboard full of white powders";
   // $http.get("/userPage").then(function(response){

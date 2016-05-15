@@ -1,38 +1,81 @@
-@charset "utf-8";
-
 html {
-  box-sizing: border-box;
-  *, *:before, *:after {
-  box-sizing: inherit;
-}
-}
-h1, h2, body, a, p, input {
-  font-family: "Bookman Old Style", sans-serif;
-  color: #3f3c3a;
-  text-align: center;
-}
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+.top {
+  font-family: "Timber", sans-sefif;
+  color: #661b24;
+  font-size: 200px;
+  text-align: center; }
+
+input[type=text] {
+  font-size: 70px;
+  font-family: "Timber", sans-sefif;
+  font-color: #9e7937;
+  background-color: blue;
+  width: 800px;
+  height: 100px;
+  float: left; }
+
+input[type=password] {
+  background-color: yellow;
+  font-size: 70px;
+  font-family: "Timber", sans-sefif;
+  font-color: #9e7937;
+  width: 800px;
+  height: 100px;
+  float: left; }
+
+.sButton {
+  border-radius: 70px;
+  font-family: "Timber", sans-sefif;
+  font-color: #661b24;
+  font-size: 100px;
+  background-color: orange; }
+
+.registration {
+  border-radius: 70px;
+  font-family: "Timber", sans-sefif;
+  font-color: #661b24;
+  font-size: 100px;
+  background-color: orange; }
+
+a {
+  text-decoration: none;
+  font-color: none; }
+
+li {
+  list-style: none; }
+
+#loginForm {
+  color: #661b24;
+  font-family: "Timber", sans-sefif;
+  font-size: 200px; }
+
 body {
-  background-color: #9e7937;
-}
+  background: url(WhitePowderBag.png) repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
 
 .navigation-wrapper {
-  
-}
-img {
-  display: center;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 35px;
-  padding-bottom: 10px;
-  margin-right: 5%;
-}
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
 
-}
-/*h2 {
-  text-align: center;
-  width: 100%;
-  font-size: 45px;
-}*/
-p {
-  font-size: 25px;
-}
+.nav {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%; }
+  .nav:last-child {
+    margin-right: 0; }
+
+/*# sourceMappingURL=style.css.map */

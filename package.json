@@ -14,11 +14,15 @@
     "angular-route": "^1.5.5",
     "bcrypt": "^0.8.6",
     "body-parser": "^1.15.0",
+    "bourbon": "^4.2.7",
+    "bourbon-neat": "^1.7.4",
     "express": "^4.13.4",
     "express-session": "^1.13.0",
     "grunt": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
     "neat": "^1.2.2",
     "node-sass": "^3.7.0",
     "passport": "^0.3.2",
@@ -27,6 +31,7 @@
     "sass": "^0.5.0"
   },
   "devDependencies": {
+    "grunt-contrib-sass": "^1.0.0",
     "node-bourbon": "^4.2.8"
   }
 }

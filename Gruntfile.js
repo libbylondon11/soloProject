@@ -25,12 +25,12 @@ module.exports = function(grunt) {
   sass: {
     dist: {
       options: {
-        // includePaths: require('node-bourbon').with('other/path', 'another/path')
-        // - or -
-        includePaths: require('node-bourbon').includePaths
+
+        // includePaths: require('node-bourbon').includePaths
+
       },
       files: {
-        'path/to/output.css': 'path/to/input.scss'
+        'server/public/views/style.css': 'server/public/views/application.scss'
       }
     }
   }
@@ -38,8 +38,10 @@ module.exports = function(grunt) {
 
    grunt.loadNpmTasks('grunt-contrib-copy');
    grunt.loadNpmTasks('grunt-contrib-uglify');
+   grunt.loadNpmTasks('grunt-contrib-sass');
+  //  grunt.loadNpmTasks('grunt-contrib-watch');
 
    // Default task(s).
-   grunt.registerTask('default', ['copy', 'uglify']);
+   grunt.registerTask('default', ['copy', 'uglify', 'sass']);
 
 };

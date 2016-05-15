@@ -13,26 +13,25 @@
 
 </head>
     <!-- <base href="/" /> -->
-
-    <h2> NAME THAT POWDER:
-  A Co-op Bulk Aisle Support App
-      </h2>
-      <img src="views/WhitePowderBag.png" alt="Logo image" height="250px" width="175px">
-  <body class="container" ng-controller="LoginController as login">
+    <div class="top"> NAME THAT POWDER:
+  A Co-op Bulk Aisle Support App</div>
+      <!-- <img src="views/WhitePowderBag.png" alt="Logo image" height="250px" width="175px"> -->
+  <body class="signinPage" ng-controller="LoginController as login">
     <p> Log in to find the name of your powder! </p>
     <form id="loginForm" action="/" method="POST">
-      <div>
+      <div class="username">
       <label for="username"> Username: </label>
-      <input type="text" name="username" id= "username" />
+      <input type="text" name="username" id= "username" class="idk"/>
 </div>
-    <div>
+    <div class="password">
       <label for "password"> Password: </label>
       <input type="password" name="password" id="password"/>
     </div>
-    <div>
-      <input type="submit"/>
-      <a href="/register">Register</a>
-    </div>
+    <input type="submit" name="submitting" class="sButton"/>
+
+    <a href="/register" name="registering" class="registration">Register</a>
+
+  </div>
   </form>
 </body>
 <html>

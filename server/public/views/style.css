@@ -11,44 +11,88 @@ html {
 .top {
   font-family: "Timber", sans-sefif;
   color: #661b24;
-  font-size: 200px;
+  font-size: 100px;
+  text-align: center;
+  padding-top: 10px; }
+
+.select {
+  font-size: 25px;
+  font-style: "Timber", sans-sefif;
+  font-color: #3f3c3a;
   text-align: center; }
 
 input[type=text] {
-  font-size: 70px;
+  background-color: #87a296;
+  font-size: 60px;
   font-family: "Timber", sans-sefif;
   font-color: #9e7937;
-  background-color: blue;
-  width: 800px;
-  height: 100px;
-  float: left; }
+  width: 600px;
+  height: 80px;
+  text-align: center; }
 
 input[type=password] {
-  background-color: yellow;
-  font-size: 70px;
+  background-color: #87a296;
+  font-size: 60px;
   font-family: "Timber", sans-sefif;
   font-color: #9e7937;
-  width: 800px;
-  height: 100px;
-  float: left; }
+  width: 600px;
+  height: 80px;
+  text-align: center; }
 
 .sButton {
-  border-radius: 70px;
+  border-radius: 50px;
+  padding: 10px;
   font-family: "Timber", sans-sefif;
   font-color: #661b24;
-  font-size: 100px;
-  background-color: orange; }
+  font-size: 40px;
+  background-color: #2d783b;
+  border-color: black; }
 
 .registration {
-  border-radius: 70px;
+  border-radius: 50px;
+  padding: 10px;
   font-family: "Timber", sans-sefif;
   font-color: #661b24;
-  font-size: 100px;
-  background-color: orange; }
+  font-size: 40px;
+  background-color: #2d783b;
+  border-color: black; }
+
+.ng-view {
+  font-color: black; }
 
 a {
   text-decoration: none;
   font-color: none; }
+
+.deleteB {
+  font-family: "Timber", sans-sefif;
+  font-color: #661b24;
+  font-size: 14px;
+  background-color: #661b24; }
+
+.wedgeClass {
+  font-family: "Timber", sans-sefif;
+  border-radius: 10px;
+  font-color: #661b24;
+  font-size: 10px;
+  background-color: #87a296;
+  text-align: center; }
+
+.eastsideClass {
+  border-radius: 10px;
+  font-family: "Timber", sans-sefif;
+  font-color: #661b24;
+  font-size: 12px;
+  background-color: #87a296;
+  text-align: center; }
+
+.sewardClass {
+  border-radius: 10px;
+  font-family: "Timber", sans-sefif;
+  font-color: #661b24;
+  font-size: 12px;
+  background-color: #87a296;
+  text-align: center; }
 
 li {
   list-style: none; }
@@ -56,26 +100,114 @@ li {
 #loginForm {
   color: #661b24;
   font-family: "Timber", sans-sefif;
-  font-size: 200px; }
+  font-size: 60px; }
+
+h1 {
+  font-size: 45px;
+  text-align: center;
+  font-family: "Timber", sans-sefif;
+  color: #661b24;
+  height: 50px; }
+
+p {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Palatino Linotype';
+  font-color: #3f3c3a; }
+
+.jumbotron {
+  display: center; }
+
+.signinPage {
+  background: url(WhitePowderBag.png) repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Timber", sans-sefif;
+  font-color: #661b24;
+  background-color: #ead8c3; }
 
 body {
-  background: url(WhitePowderBag.png) repeat center center fixed;
+  font-family: "Timber", sans-sefif;
+  font-color: #661b24; }
+
+.container {
+  background: url(talcum-white-large.png) repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
 
-.navigation-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; }
+img {
+  display: center; }
 
-.nav {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 74.41059%; }
-  .nav:last-child {
-    margin-right: 0; }
+.E {
+  font-size: 25px;
+  font-color: #3f3c3a;
+  font-family: "Timber", sans-sefif;
+  float: right;
+  width: 20%;
+  height: 70px; }
+
+.S {
+  font-size: 25px;
+  font-color: #3f3c3a;
+  font-family: "Timber", sans-sefif;
+  float: right;
+  width: 20%;
+  height: 50px; }
+
+.W {
+  font-size: 25px;
+  font-color: #3f3c3a;
+  font-family: "Timber", sans-sefif;
+  float: right;
+  width: 33%;
+  height: 60px; }
+
+.cupboard {
+  font-family: "Timber", sans-sefif;
+  font-size: 20px;
+  font-color: #3f3c3a; }
+
+.logout {
+  font-family: "Timber", sans-sefif;
+  font-size: 20px;
+  font-color: #3f3c3a; }
+
+.home {
+  font-family: "Timber", sans-sefif;
+  font-size: 20px;
+  font-color: #3f3c3a; }
+
+.eastsideTitle {
+  font-size: 12px;
+  text-align: center; }
+
+.wedgeTitle {
+  font-size: 12px;
+  text-align: center; }
+
+.sewardTitle {
+  font-size: 12px;
+  text-align: center; }
+
+.displayWedge {
+  font-size: 11px;
+  display: center; }
+
+.userArea {
+  font-size: 11px;
+  display: center; }
+
+.displayEastside {
+  font-size: 11px;
+  display: center; }
+
+.displaySeward {
+  font-size: 11px;
+  display: center; }
 
 /*# sourceMappingURL=style.css.map */

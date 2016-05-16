@@ -12,37 +12,40 @@
     <base href="/"/>
 
   </head>
-  <div class="jumbotron">
-    <h1>NAME THAT POWDER: A Co-op Bulk Aisle Support App </h1>
-<h2>For those times when you buy a white colored spice in the bulk aisle and forget to write down the name </h2>
-  <h3>Which white powder are you searching for today?
-    Select your co-op below:  </h3>
+
+      <div class="top">NAME THAT WHITE POWDER: A Co-op Bulk Aisle Support App </div>
+      <div class="select"> 1. Select the co-op you think your white powder came from
+        2. Simply search by co-op name and PLU number </div>
+
+<!-- <img src="views/WhitePowderBag.png" alt="Logo image" height="375px" width="250px"> -->
+
+
+      <div class="button"><a href="/userCupboard" class="cupboard">View Cupboard</a></button>
+      <div class="button"><a href="/logout" class="logout" target="_self">Log Out</a></button>
+      <div class="button"><a href="/"class="home">Home</a></button>
+</div>
+</div>
+</div>
+  <!-- <img src="views/WhitePowderBag.png" alt="logo image" height="300px" width="225px"> -->
+
+
 </div>
   <body class="container" ng-controller= "HomeController as home">
-  <header class="navigation">
-    <div class="navigation-wrapper">
-      <!-- <a href="javascript:void(0)" class="logo">
-        <img src="views/WhitePowderBag.png" alt="Logo image" height="250px" width="175px">
-    </a> -->
-    <div class="nav">
-          <ul class="navigation-menu">
-            <li class="nav-link"><a href="/eastsideView">Eastside Co-op</a></li>
-            <li class="nav-link"><a href="/sewardView">Seward Friendship Co-op</a></li>
-            <li class="nav-link"><a href="/wedgeView">Wedge Co-op</a></li>
-            <li class="nav-link"><a href="/userCupboard">View Your Cupboard</a></li>
-            <li class="nav-link"><a href="/logout" target="_self">Log Out</a></li>
-            <li class="nav-link"><a href="/">Home</a></li>
+  <div class="navigation">
 
-          <!-- <nav role="navigation">
-               <a href="/eastsideView">Eastside Co-op</a> -->
-           </ul>
-         </nav>
+            <div class="button"><div class="E"><a href="/eastsideView">Eastside</a></div></button>
+            <div class="button"><div class="S"><a href="/sewardView">Seward </a></div></button>
+            <div class="button"><div class="W"><a href="/wedgeView">The Wedge</a></div></button>
        </div>
 
-          </ul>
-
- </header>
+     </div>
+</div>
+</div>
+ </div>
 <div ng-view>
 </div>
+<footer>
+<!-- <p> Created by Libby London, Minneapolis, MN @2016</p> -->
+</footer>
 </body>
 </html>

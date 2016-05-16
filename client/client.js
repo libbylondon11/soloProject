@@ -55,7 +55,7 @@ app.controller('SewardController', ['$http', function($http){
   vm.id=2;
   // this.coopArray=[];
   this.coopArray={};
-  this.message="select your white powder:";
+  // this.message="Select your white powder(s):";
   $http.get("/coops/" + vm.id).then(function(response){
     vm.coopArray=response.data;
     console.log(response);
@@ -74,7 +74,7 @@ app.controller('EastsideController', ['$http', function($http){
   vm.name = "Eastside Co-op";
   vm.id=1;
   this.coopArray={};
-  this.message="welcome to eastside; select your white powder";
+  // this.message="Select your white powder(s):";
   $http.get("/coops/" + vm.id).then(function(response){
     vm.coopArray=response.data;
 
@@ -94,7 +94,7 @@ app.controller('WedgeController', ['$http', function($http){
   vm.name="Wedge Co-op";
   vm.id=3;
   this.coopArray={};
-  this.message="Here are the white powder names";
+  // this.message="Select your white powder(s)";
   $http.get("/coops/"+ vm.id).then(function(response){
     vm.coopArray=response.data;
 
@@ -119,7 +119,7 @@ app.controller('UserController', ['UserService', '$http', function(UserService, 
 
   UserService.getUserData();
 
-  vm.message="Hey user, here is your cupboard full of white powders";
+  vm.message="Here is your cupboard full of white powders. Consider labeling them!";
   // $http.get("/userPage").then(function(response){
   //   console.log('userPage', response);
   //   vm.cupboardContentsArray=response.data;

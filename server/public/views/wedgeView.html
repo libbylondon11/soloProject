@@ -1,12 +1,17 @@
-<div class="wedgeTitle">Wedge Co-op:</div>
+<div class="wedgeTitle">
 <div>
   {{wedge.message}}
   <!-- {{seward.coopArray}} -->
+  <div class="displayWedge">
   <div ng-repeat="item in wedge.coopArray">
     PLU: {{item.product_id_plu}}
     Name: {{item.product_name}}
-    <button ng-click="wedge.addToUserCupboard(item)">Add to my Cupboard</button>
+    <div class="button">
+    <button ng-click="wedge.addToUserCupboard(item)"class="wedgeClass">Add to my Cupboard</button>
   </div>
   <!-- {{seward.data.product_name}} -->
   <!-- {{seward.response.data}} -->
+</div>
+</div>
+</div>
 </div>
